@@ -23,4 +23,9 @@ Router.route('/lesson/:_id', {
 Router.route('create/learner', {
 	name: 'createLearner',
 	template: 'createLearner'
-})
+});
+
+Router.route('create/lesson', {
+	name: 'createLesson',
+	template: 'createLesson'
+});
