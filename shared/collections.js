@@ -20,7 +20,7 @@ if (Meteor.isServer) {
 //Return a single mockup lesson right now for development purposes
 function mockupLessons(){
 	lessons.insert(mockupLesson("Superawesome French Lessons",
-		"languages/french",
+		Categories[3],
 		"Hi, I'm really into French and would like to learn you new stuff",
 		15,
 		false,
@@ -32,7 +32,7 @@ function mockupLessons(){
 		"13:00",
 		Date.now()));
 	lessons.insert(mockupLesson("Supercool Singing Lessons", 
-		"music/singing", 
+		Categories[8], 
 		"Ladiela", 
 		10, 
 		true, 
@@ -44,7 +44,7 @@ function mockupLessons(){
 		"13:00",
 		Date.now()));
 	lessons.insert(mockupLesson("Painting Is Cool", 
-		"art/paining", 
+		Categories[0], 
 		"Learn to draw beautiful little trees", 
 		26, 
 		true, 
@@ -101,3 +101,15 @@ Stations = [
 ];
 
 AnyStation = "Any";
+
+Categories = [
+	"Arts & Humanities",
+	"Computer Science",
+	"Life Science",
+	"Language",
+	"Math & Logic",
+	"Personal Development",
+	"Physical Science & Engineering",
+	"Social Skills",
+	"Other"
+]
