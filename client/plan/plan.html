@@ -2,8 +2,17 @@
 	<body>
 	From: {{fromStation}}<br />
 	To: {{toStation}}<br />
+	<br />
 	Departure Time: {{departTime}}<br />
+	<div class="input-group datetimepicker">
+	    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+	   <input class="set-due-date form-control" id="departTimePicker" type="text"/>
+	</div>
 	Arrive Time: {{arriveTime}}<br />
+	<div class="input-group datetimepicker">
+	    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+	   <input class="set-due-date form-control" id="arriveTimePicker" type="text"/>
+	</div>
 
 	<hr />
 	{{#each relevantLessons}}

@@ -21,3 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 accounts-ui
 accounts-facebook
+tsega:bootstrap3-datetimepicker
