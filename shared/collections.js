@@ -37,3 +37,11 @@ function mockupLesson(title, category, description, hourlyPrice, teacher){
 		teacher: teacher
 	};
 }
+
+//Non mongo collections
+
+AccountType= {
+	STUDENT: 1,
+	TEACHER: 2,
+	ADMIN: 3	
+};
