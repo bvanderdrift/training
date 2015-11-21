@@ -11,7 +11,7 @@ Template.browse.helpers({
 				{title: regex},
 				{description: regex},
 				{category: regex},
-				{teacher: regex},
+				{teacher: regex}
 			];
 		};
 
