@@ -1,5 +1,3 @@
-Session.set("filter", {});
-
 Template.browse.helpers({
 	lessons: function(){
 		var query = {};
