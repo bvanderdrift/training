@@ -1,0 +1,1 @@
+lessons = new Meteor.Collection('lessons');
