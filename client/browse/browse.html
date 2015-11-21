@@ -10,7 +10,13 @@ Search: <input type="text" id="searchField"/>
 
 =======================
 {{#each lessons}}
-	{{> lesson}}
+	<a href="{{pathFor route='lesson'}}"> <br />
+	<b>Title:</b> {{title}} <br />
+	<b>Teacher:</b> {{teacher}} <br />
+	<b>Hourly Price:</b> €{{hourlyPrice}}<br />
+	<b>Category:</b> {{category}}<br />
+	<b>Description:</b> {{description}}<br /></a>
+	=======================
 {{/each}}
 </body>
 
