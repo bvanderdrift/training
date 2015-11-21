@@ -23,18 +23,65 @@ function mockupLessons(){
 		"languages/french",
 		"Hi, I'm really into French and would like to learn you new stuff",
 		15,
-		"Madame French"));
-	lessons.insert(mockupLesson("Supercool Singing Lessons", "music/singing", "Ladiela", 10, "Isabelle"));
-	lessons.insert(mockupLesson("Painting Is Cool", "art/paining", "Learn to draw beautiful little trees", 26, "Bob Ross"));
+		false,
+		"Madame French",
+		"women",
+		Stations[0],
+		"12:00",
+		Stations[2],
+		"13:00",
+		Date.now()));
+	lessons.insert(mockupLesson("Supercool Singing Lessons", 
+		"music/singing", 
+		"Ladiela", 
+		10, 
+		true, 
+		"Isabelle", 
+		"women",
+		Stations[2],
+		"12:00",
+		Stations[3],
+		"13:00",
+		Date.now()));
+	lessons.insert(mockupLesson("Painting Is Cool", 
+		"art/paining", 
+		"Learn to draw beautiful little trees", 
+		26, 
+		true, 
+		"Bob Ross", 
+		"men",
+		Stations[1],
+		"12:00",
+		Stations[0],
+		"13:00",
+		Date.now()));
 }
 
-function mockupLesson(title, category, description, hourlyPrice, teacher){
+function mockupLesson(title, category, description, hourlyPrice, preperation, name, gender, depStation, depTime, arrStation, arrTime, firstTravelDate){
+	var r = parseInt(Math.random() * 97);
+	var profilePicURL = "http://api.randomuser.me/portraits/med/" + gender + "/" + r + ".jpg";
 	return {
 		title: title,
 		category: category,
 		description: description,
 		hourlyPrice: hourlyPrice,
-		teacher: teacher
+		preperation: preperation,
+		teacher: {
+			name: name,
+			profilePicURL: profilePicURL
+		},
+		travel:
+		{
+			departion:{
+				station: depStation,
+				time: depTime
+			},
+			arrival:{
+				station: arrStation,
+				time: arrTime
+			},
+			firstTravelDate: firstTravelDate
+		}
 	};
 }
 

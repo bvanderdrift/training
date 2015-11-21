@@ -27,6 +27,8 @@ Template.plan.helpers({
 	},
 
 	relevantLessons: function(){
-		return lessons.find({});
+		var query = {};
+
+		return lessons.find(query);
 	}
 });

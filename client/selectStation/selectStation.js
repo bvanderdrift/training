@@ -1,5 +1,7 @@
+Session.setDefault("currentStationType", "unknown");
+
 Template.selectStation.onRendered(function(){
-	currentStation = this.data;
+	Session.set("currentStationType", this.data);
 });
 
 Template.selectStation.helpers({
@@ -10,13 +12,17 @@ Template.selectStation.helpers({
 			stations.push({name: Stations[i]});
 		}
 
+		if(Session.get("currentStationType") == "toStation"){
+			stations.push({name: "Any"});
+		}
+
 		return stations;
 	}
 });
 
 Template.selectStation.events({
 	'click button': function(e){
-		Session.set(currentStation, e.currentTarget.innerHTML);
+		Session.set(Session.get("currentStationType"), e.currentTarget.innerHTML);
 		history.back();
 	}
 });
