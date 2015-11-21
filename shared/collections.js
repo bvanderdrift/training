@@ -40,8 +40,15 @@ function mockupLesson(title, category, description, hourlyPrice, teacher){
 
 //Non mongo collections
 
-AccountType= {
+AccountType = {
 	STUDENT: 1,
 	TEACHER: 2,
 	ADMIN: 3	
 };
+
+Stations = [
+	"King's Cross",
+	"Newcastle Station",
+	"Liverpool Station",
+	"Manchester Station"
+];
