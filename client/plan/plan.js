@@ -27,7 +27,13 @@ Template.plan.helpers({
 	},
 
 	relevantLessons: function(){
-		var query = {};
+		var query = {}
+
+		query["travel.departion.station"] = Session.get("fromStation");
+
+		if(Session.get("toStation") != AnyStation){
+			query["travel.arrival.station"] = Session.get("toStation");
+		}
 
 		return lessons.find(query);
 	}

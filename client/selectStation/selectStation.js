@@ -13,7 +13,7 @@ Template.selectStation.helpers({
 		}
 
 		if(Session.get("currentStationType") == "toStation"){
-			stations.push({name: "Any"});
+			stations.push({name: AnyStation});
 		}
 
 		return stations;

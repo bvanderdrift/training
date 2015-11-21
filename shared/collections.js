@@ -99,3 +99,5 @@ Stations = [
 	"Liverpool Station",
 	"Manchester Station"
 ];
+
+AnyStation = "Any";
