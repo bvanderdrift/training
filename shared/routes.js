@@ -1,3 +1,11 @@
+Router.onBeforeAction(function() {
+	if(Meteor.userId()){
+		this.next();
+	}else{
+		this.render('loginScreen');
+	}
+});
+
 Router.configure({
 	layoutTemplate: 'mainLayout'
 });
@@ -29,3 +37,7 @@ Router.route('create/lesson', {
 	name: 'createLesson',
 	template: 'createLesson'
 });
+
+Router.route('/(.*)', function(){
+	this.render('notFound');
+})
