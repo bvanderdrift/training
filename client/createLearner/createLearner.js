@@ -1,3 +1,7 @@
+Template.createLearner.onRendered(function(){
+	setCheckedCheckboxesValues($(".categoryCB"), Meteor.user().profile.interests);
+});
+
 Template.createLearner.helpers({
 	categories: function(){
 		return [
@@ -16,7 +20,9 @@ Template.createLearner.events({
 
 		interestedCats = getCheckedCheckboxesValues($(".categoryCB"));
 
-		console.log(interestedCats);
+		Meteor.users.update(Meteor.userId(), {$set: {"profile.interests": interestedCats}});
+
+		Router.go('home');
 	}
 });
 
@@ -28,6 +34,20 @@ function getCheckedCheckboxesValues(checkboxes){
 
 		if(checkbox.checked){
 			resultValues.push(checkbox.value);
+		}
+	}
+
+	return resultValues;
+}
+
+function setCheckedCheckboxesValues(checkboxes, values){
+	var resultValues = [];
+
+	for (var i = checkboxes.length - 1; i >= 0; i--) {
+		var checkbox = checkboxes[i];
+
+		if(values.indexOf(checkbox.value) >= 0){
+			checkbox.checked = true;
 		}
 	}
 

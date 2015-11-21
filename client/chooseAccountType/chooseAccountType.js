@@ -12,5 +12,5 @@ Template.chooseAccountType.events({
 });
 
 function SetAccountType(type){
-	Meteor.users.update(Meteor.userId(), {$set: {profile: {accountType: type}}});
+	Meteor.users.update(Meteor.userId(), {$set: {"profile.accountType": type}});
 }
