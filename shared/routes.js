@@ -15,8 +15,8 @@ Router.configure({
 });
 
 Router.route('/', {
-	name: 'home',
-	template: 'home'
+	name: 'plan',
+	template: 'plan'
 });
 
 Router.route('/browse', {
