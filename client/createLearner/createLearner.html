@@ -1,7 +1,15 @@
 <template name="createLearner">
 
 <body>
-Here you can create a learner
+Welcome new learner! Please give us your interests!
+
+<form id="categoryForm">
+{{#each categories}}
+<input type="checkbox" value="{{name}}" class="categoryCB"> {{name}}<br />
+{{/each}}
+<input type="submit">
+</form>
+
 </body>
 
 </template>
