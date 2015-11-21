@@ -1,7 +1,13 @@
 <template name="plan">
 	<body>
+	From: {{fromStation}}<br />
+	To: {{toStation}}<br />
+	Departure Time: {{departTime}}<br />
+	Arrive Time: {{arriveTime}}<br />
 
-	This is home.
-
+	<hr />
+	{{#each relevantLessons}}
+		{{> lesson}}
+	{{/each}}
 	</body>
 </template>
