@@ -1,8 +1,12 @@
 Router.onBeforeAction(function() {
-	if(Meteor.userId()){
-		this.next();
-	}else{
+	var user = Meteor.user();
+
+	if(!user){
 		this.render('loginScreen');
+	}else if(!user.profile.accountType){
+		this.render('chooseAccountType');
+	}else{
+		this.next();
 	}
 });
 
@@ -31,6 +35,11 @@ Router.route('/lesson/:_id', {
 Router.route('create/learner', {
 	name: 'createLearner',
 	template: 'createLearner'
+});
+
+Router.route('create/teacher', {
+	name: 'createTeacher',
+	template: 'createTeacher'
 });
 
 Router.route('create/lesson', {

@@ -1,3 +1,12 @@
 <template name="loginScreen">
-Heyaa
+	<img src="http://www.clipartlord.com/wp-content/uploads/2013/03/train6.png" style="width: 200px"/><br />
+	<h1>Take your brain on a journey</h1>
+
+	<ul>
+		{{#each pluspoints}}
+			<li>{{point}}</li>
+		{{/each}}
+	</ul>
+
+	{{> loginButtons}}
 </template>

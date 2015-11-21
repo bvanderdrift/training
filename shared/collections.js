@@ -10,6 +10,9 @@ if (Meteor.isServer) {
   Meteor.methods({
   	removeLessons: function(){
   		lessons.remove({});
+  	},
+  	removeUsers: function(){
+  		Meteor.users.remove({});
   	}
   })
 }
