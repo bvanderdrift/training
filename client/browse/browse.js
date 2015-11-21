@@ -2,15 +2,20 @@ Session.set("filter", {});
 
 Template.browse.helpers({
 	lessons: function(){
-		var regex = new RegExp(".*" + Session.get("searchInput") + ".*", "i");
-		return lessons.find({
-			$or: [
+		var query = {};
+
+		if(Session.get("searchInput")){
+			var regex = new RegExp(".*" + Session.get("searchInput") + ".*", "i");
+		
+			query["$or"] = [
 				{title: regex},
 				{description: regex},
 				{category: regex},
 				{teacher: regex},
-			]
-		});
+			];
+		};
+
+		return lessons.find(query);
 	}
 });
 
