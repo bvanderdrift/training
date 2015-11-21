@@ -47,6 +47,14 @@ Router.route('create/lesson', {
 	template: 'createLesson'
 });
 
+Router.route('select/station/:stationType', {
+	name: 'selectStation',
+	template: 'selectStation',
+	data: function(){
+		return this.params.stationType;
+	}
+});
+
 Router.route('/(.*)', function(){
 	this.render('notFound');
 })

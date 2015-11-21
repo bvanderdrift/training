@@ -1,7 +1,7 @@
 <template name="plan">
 	<body>
-	From: {{fromStation}}<br />
-	To: {{toStation}}<br />
+	From: <a href="{{pathFor route='selectStation' stationType='fromStation'}}">{{fromStation}}</a><br />
+	To: <a href="{{pathFor route='selectStation' stationType='toStation'}}">{{toStation}}</a><br />
 	<br />
 	Departure Time: {{departTime}}<br />
 	<div class="input-group datetimepicker">

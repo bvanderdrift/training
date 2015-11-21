@@ -1,8 +1,8 @@
 Template.plan.onRendered(function(){
-	Session.set("fromStation", Stations[0]);
-	Session.set("toStation", Stations[1]);
-	Session.set("departTime", "11:00");
-	Session.set("arriveTime", "12:00");
+	Session.setDefault("fromStation", Stations[0]);
+	Session.setDefault("toStation", Stations[1]);
+	Session.setDefault("departTime", "11:00");
+	Session.setDefault("arriveTime", "12:00");
 
 	//Setup the timepickers
 	this.$('#departTimePicker').datetimepicker();
