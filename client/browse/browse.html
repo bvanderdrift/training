@@ -1,7 +1,12 @@
 <template name="browse">
 
 <body>
-This is where you browse lessons
+This is where you browse lessons <br />
+<br />
+=======================
+{{#each lessons}}
+	{{> lesson}}
+{{/each}}
 </body>
 
 </template>
