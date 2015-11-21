@@ -6,6 +6,12 @@
 	<body>
 	  <h1>Welcome at your Training</h1><br />
 	  <a href="{{pathFor route='home'}}">Home</a> || <a href="{{pathFor route='browse'}}">Browse</a> || <a href="{{pathFor route='createLearner'}}">Create Learner</a>
+
+	  {{#if currentUser}}
+	  <img src="{{profilePictureUrl}}" />
+	  {{/if}}
+
+	  <div style="float: right">{{> loginButtons}}</div>
 	  <hr />
 
 	  {{> yield}}
