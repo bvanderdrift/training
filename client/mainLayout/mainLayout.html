@@ -4,9 +4,12 @@
 	</head>
 
 	<body>
-	  <div style="float: right">{{> loginButtons}}</div>
-	  <!-- Here we'll put a sidemenu -->
-	  
-	  {{> yield}}
+	  {{#ionBody}}
+	  	{{> ionNavBar}}
+
+	  	{{#ionNavView}}
+	  		{{> yield}}
+	  	{{/ionNavView}}
+	  {{/ionBody}}
 	</body>
 </template>
