@@ -1,1 +1,25 @@
-/* CSS declarations go here */
+.bar.bar-header.bar-stable{
+	background-color: #192644;
+	border-color: #192644;
+	color: #f9f9ed;
+}
+
+.bar.bar-header.bar-stable .back-button{
+	color: #f9f9ed;
+}
+
+.bar.bar-header.bar-stable .title{
+	color: #f9f9ed;
+}
+
+.view{
+	color: #f9f9ed;
+}
+
+.train-text{
+	color: #f9f9ed;
+}
+
+.content{
+	background-color: #192644;
+}
