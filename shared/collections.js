@@ -26,8 +26,8 @@ function mockupLessons(){
 		false,
 		"Jamie Lebrun",
 		"/ProfileMockImages/julie.jpg",
-		Stations[0],
-		Stations[2],
+		Stations[5],
+		Stations[6],
 		"/LessonMockImages/paris.png",
 		45));
 	lessons.insert(mockupLesson("MAGIC CARDTRICKS", 
@@ -52,7 +52,7 @@ function mockupLessons(){
 		Stations[1],
 		"/LessonMockImages/knit.png",
 		45));
-}
+};
 
 function mockupLesson(title, category, description, hourlyPrice, preperation, name, profilePicURL, depStation, arrStation, backgroundImage, duration){
 	return {
@@ -87,7 +87,10 @@ Stations = [
 	"King's Cross",
 	"Newcastle Station",
 	"Liverpool Station",
-	"Manchester Station"
+	"Manchester Station",
+	"Cambridge",
+	"Oxford",
+	"Paddington"
 ];
 
 AnyStation = "Any";
