@@ -7,13 +7,16 @@ Template.lesson.onRendered(function(){
 
 	$(".collapsable-info").hide();
 
-	$(".lesson-div").click(function(){
-		var cInfo = $(this).find(".collapsable-info");
+	$(".lesson-div").each(function(){
+		$(this).click(function(){
+			var cInfo = $(this).find(".collapsable-info");
+			console.log("Heya");
 		
-		if(cInfo.is(':hidden')){
-			cInfo.show();
-		}else{
-			cInfo.hide();
-		}
+			if(cInfo.is(':hidden')){
+				cInfo.show();
+			}else{
+				cInfo.hide();
+			}
+		});
 	});
 });

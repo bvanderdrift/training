@@ -10,6 +10,7 @@ if (Meteor.isServer) {
   Meteor.methods({
   	removeLessons: function(){
   		lessons.remove({});
+  		mockupLessons();
   	},
   	removeUsers: function(){
   		Meteor.users.remove({});
@@ -77,21 +78,6 @@ function mockupLessons(){
 		7,
 		false,
 		"James Harley",
-		profilePicURL,
-		Stations[5],
-		Stations[6],
-		undefined,
-		10))
-
-	r = parseInt(Math.random() * 97);
-	profilePicURL = "http://api.randomuser.me/portraits/med/" + "women" + "/" + r + ".jpg";
-
-	lessons.insert(mockupLesson("INTRODUCTION TO C#",
-		Categories[1],
-		"I love teaching people to program!",
-		20,
-		false,
-		"Sherley Meteor",
 		profilePicURL,
 		Stations[5],
 		Stations[6],

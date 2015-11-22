@@ -1,6 +1,8 @@
 <template name="lesson">
 	<div class="lesson-div">
-		<img src="{{backgroundImage}}" class="lesson-background-image" />
+		<div class="lesson-bg-img-holder">
+			{{#if backgroundImage}}<img src="{{backgroundImage}}" class="lesson-background-image" />{{/if}}
+		</div>
 
 		<div style="background-image: url({{teacher.profilePicURL}})" class="lesson-teacher-pf"></div>
 
