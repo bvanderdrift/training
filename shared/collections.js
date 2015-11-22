@@ -54,8 +54,17 @@ function mockupLessons(){
 		"/LessonMockImages/knit.png",
 		45));
 
-	var r = parseInt(Math.random() * 97);
-	var profilePicURL = "http://api.randomuser.me/portraits/med/" + "women" + "/" + r + ".jpg";
+	lessons.insert(mockupLesson("MEDITATION ADVICE",
+		Categories[0],
+		"Meditation is one of the most ancient practices in the world. The monks have been using it to become one with their body for ages. Now it's possible for you.",
+		7,
+		false,
+		"James Harley",
+		"/ProfileMockImages/person.jpg",
+		Stations[5],
+		Stations[6],
+		"/LessonMockImages/sand.jpg",
+		10));
 
 	lessons.insert(mockupLesson("PRESENTATION LESSONS",
 		Categories[7],
@@ -68,21 +77,6 @@ function mockupLessons(){
 		Stations[6],
 		undefined,
 		20));
-
-	r = parseInt(Math.random() * 97);
-	profilePicURL = "http://api.randomuser.me/portraits/med/" + "men" + "/" + r + ".jpg";
-
-	lessons.insert(mockupLesson("MEDITATION ADVICE",
-		Categories[0],
-		"Meditation is one of the most ancient practices in the world. The monks have been using it to become one with their body for ages. Now it's possible for you.",
-		7,
-		false,
-		"James Harley",
-		"/ProfileMockImages/person.jpg",
-		Stations[5],
-		Stations[6],
-		undefined,
-		10));
 };
 
 function mockupLesson(title, category, description, hourlyPrice, preperation, name, profilePicURL, depStation, arrStation, backgroundImage, duration){

@@ -1,7 +1,20 @@
 .item.unselected{
-	background-color: #668EB7;
+	background-color: #192644;
+	border-width: 0px;
+}
+
+.item.unselected h2{
+	color: #f9f9ed;
+	font-size: 30pt;
 }
 
 .item.selected{
-	background-color: #fbcf33;
+	background-color: #192644;
+	border-width: 0px;
+}
+
+.item.selected h2{
+	color: #fbcf33;
+	font-size: 30pt;
+	font-weight: bold;
 }
