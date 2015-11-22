@@ -1,15 +1,26 @@
 <template name="createLearner">
 
-<body>
-Welcome new learner! Please give us your interests!
+	{{#contentFor "headerButtonLeft"}}
+		{{>ionNavBackButton}}
+	{{/contentFor}}
 
-<form id="categoryForm">
-{{#each categories}}
-<input type="checkbox" value="{{name}}" class="categoryCB"> {{name}}<br />
-{{/each}}
-<input type="submit">
-</form>
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Welcome</h1>
+	{{/contentFor}}
 
-</body>
+	{{#ionView}}
+	  {{#ionContent}}
+	    
+	    Welcome new learner! Please give us your interests!
+
+		<form id="categoryForm">
+			{{#each categories}}
+				<input type="checkbox" value="{{name}}" class="categoryCB"> {{name}}<br />
+			{{/each}}
+			<input type="submit">
+		</form>
+
+	  {{/ionContent}}
+	{{/ionView}}
 
 </template>

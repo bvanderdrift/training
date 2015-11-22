@@ -4,13 +4,13 @@ Template.createLearner.onRendered(function(){
 
 Template.createLearner.helpers({
 	categories: function(){
-		return [
-			{name: "Languages"},
-			{name: "Art"},
-			{name: "Music"},
-			{name: "Soft-skills"},
-			{name: "Advisory"}
-		]
+		var cats = [];
+
+		for (var i = Categories.length - 1; i >= 0; i--) {
+			cats.push({name: Categories[i]});
+		}
+
+		return cats;
 	}
 });
 
@@ -22,7 +22,7 @@ Template.createLearner.events({
 
 		Meteor.users.update(Meteor.userId(), {$set: {"profile.interests": interestedCats}});
 
-		Router.go('home');
+		Router.go('plan');
 	}
 });
 

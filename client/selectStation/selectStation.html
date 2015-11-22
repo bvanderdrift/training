@@ -1,7 +1,22 @@
 <template name="selectStation">
-<ul>
-{{#each stations}}
-	<li><button>{{name}}</button></li>
-{{/each}}
-</ul>
+
+	{{#contentFor "headerButtonLeft"}}
+		{{>ionNavBackButton}}
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Welcome</h1>
+	{{/contentFor}}
+
+	{{#ionView}}
+	  {{#ionContent}}
+	  	{{#ionList class="station-list"}}
+	  		{{#each stations}}
+	  			{{#ionItem}}
+	  				<h2>{{name}}</h2>
+	  			{{/ionItem}}
+	  		{{/each}}
+	  	{{/ionList}}
+	  {{/ionContent}}
+	{{/ionView}}
 </template>

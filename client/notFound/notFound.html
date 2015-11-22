@@ -1,3 +1,15 @@
 <template name="notFound">
-Too bad, page not found.
+	{{#contentFor "headerButtonLeft"}}
+		{{>ionNavBackButton}}
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Page not found</h1>
+	{{/contentFor}}
+
+	{{#ionView}}
+	  {{#ionContent}}
+	    Too bad! Couldn't find the page!
+	  {{/ionContent}}
+	{{/ionView}}
 </template>
