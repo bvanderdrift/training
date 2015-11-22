@@ -1,0 +1,28 @@
+.stackable{
+	float:left;
+}
+
+#from-station-div{
+	width: 35%;
+	margin-right: 5%;
+	text-align: right;
+	font-size: 30pt;
+	line-height: normal;
+}
+
+#to-station-div{
+	width: 35%;
+	margin-left: 5%;
+	text-align: left;
+	font-size: 30pt;
+	line-height: normal;
+}
+
+#between-stations-img{
+	width: 20%;
+}
+
+#station-path-div{
+	overflow: hidden;
+	padding-bottom: 10%;
+}

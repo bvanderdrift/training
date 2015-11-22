@@ -7,6 +7,14 @@ Template.plan.onRendered(function(){
 	//Setup the timepickers
 	this.$('#departTimePicker').datetimepicker();
 	this.$('#arriveTimePicker').datetimepicker();
+
+	$('#from-station-div').click(function(){
+		Router.go('/select/station/fromStation');
+	});
+
+	$('#to-station-div').click(function(){
+		Router.go('/select/station/toStation');
+	});
 });
 
 Template.plan.helpers({
@@ -29,10 +37,10 @@ Template.plan.helpers({
 	relevantLessons: function(){
 		var query = {}
 
-		query["travel.departion.station"] = Session.get("fromStation");
+		query["travel.depStation"] = Session.get("fromStation");
 
 		if(Session.get("toStation") != AnyStation){
-			query["travel.arrival.station"] = Session.get("toStation");
+			query["travel.arrStation"] = Session.get("toStation");
 		}
 
 		return lessons.find(query);

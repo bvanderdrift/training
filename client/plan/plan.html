@@ -9,12 +9,11 @@
 
 	{{#ionView}}
 	  {{#ionContent}}
-		From: <a href="{{pathFor route='selectStation' stationType='fromStation'}}">{{fromStation}}</a><br />
-		To: <a href="{{pathFor route='selectStation' stationType='toStation'}}">{{toStation}}</a><br />
-		<br />
-		Departure Time: {{departTime}}<br />
-		Arrive Time: {{arriveTime}}<br />
-		<hr />
+	  	<div id="station-path-div">
+		  	<div class="stackable" id="from-station-div">{{fromStation}}</div>
+		  	<img src="/other/yellow-rail.png" id="between-stations-img" class="stackable"/>
+		  	<div class="stackable" id="to-station-div">{{toStation}}</div>
+	  	</div>
 		{{#each relevantLessons}}
 			{{> lesson}}
 		{{/each}}
