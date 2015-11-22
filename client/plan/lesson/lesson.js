@@ -10,7 +10,6 @@ Template.lesson.onRendered(function(){
 	$(".lesson-div").each(function(){
 		$(this).click(function(){
 			var cInfo = $(this).find(".collapsable-info");
-			console.log("Heya");
 		
 			if(cInfo.is(':hidden')){
 				cInfo.show();
