@@ -8,11 +8,17 @@ updateSelectedItem = function(){
 
 	$(".item").each(function(){
 		if(selectedStation == $(this).text().trim()){
+			if($(this).hasClass('unselected')){
+				$(this).addClass('selected');
+			}
+
 			$(this).addClass('selected');
 		}else{
 			if($(this).hasClass('selected')){
 				$(this).removeClass('selected');
 			}
+
+			$(this).addClass('unselected');
 		}
 	});
 }

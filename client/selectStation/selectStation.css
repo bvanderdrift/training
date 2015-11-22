@@ -1,3 +1,7 @@
+.item.unselected{
+	background-color: #668EB7;
+}
+
 .item.selected{
-	background-color:red;
+	background-color: #fbcf33;
 }
