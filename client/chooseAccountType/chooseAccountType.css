@@ -1,0 +1,33 @@
+canvas{
+	width:30%;
+}
+
+#circleCanvasTeacher{
+	position: absolute;
+	left: 15%;
+	top: 10%;
+}
+#circleCanvasLearner{
+	position: absolute;
+	right: 15%;
+	bottom: 10%;
+}
+
+#teach-div{
+	left: 30%;
+	top: 20%;
+	text-align: left;
+}
+
+#learn-div{
+	right: 30%;
+	bottom: 20%;
+	text-align: right;
+}
+
+.type-text-div{
+	position: absolute;
+	font-size: 40pt;
+	width: 20%;
+	line-height: normal;
+}

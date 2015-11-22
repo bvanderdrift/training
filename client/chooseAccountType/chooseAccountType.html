@@ -1,6 +1,5 @@
 <template name="chooseAccountType">
 	{{#contentFor "headerButtonLeft"}}
-		{{>ionNavBackButton}}
 	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}
@@ -9,10 +8,15 @@
 
 	{{#ionView}}
 	  {{#ionContent}}
-		<form>
-			<button value="student" id="studentBTN" type="button">I'm a student!</button>
-			<button value="teacher" id="teacherBTN" type="button">I'm a teacher!</button>
-		</form>
+	  	<div id="studentBTN">
+		  	<canvas id="circleCanvasTeacher" ></canvas>
+		  	<div class="type-text-div" id="teach-div">I offer a lesson</div>
+	  	</div>
+
+	  	<div id="teacherBTN">
+		  	<canvas id="circleCanvasLearner" ></canvas>
+		  	<div class="type-text-div" id="learn-div">I want to learn</div>
+	  	</div>
 	  {{/ionContent}}
 	{{/ionView}}
 
