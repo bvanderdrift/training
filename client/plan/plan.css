@@ -8,6 +8,7 @@
 	text-align: right;
 	font-size: 30pt;
 	line-height: normal;
+	margin-top: 20px;
 }
 
 #to-station-div{
@@ -16,6 +17,7 @@
 	text-align: left;
 	font-size: 30pt;
 	line-height: normal;
+	margin-top: 20px;
 }
 
 #between-stations-img{
@@ -24,5 +26,6 @@
 
 #station-path-div{
 	overflow: hidden;
-	padding-bottom: 10%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }

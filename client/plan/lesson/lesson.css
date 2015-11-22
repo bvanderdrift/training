@@ -73,22 +73,34 @@
 
 .lesson-cat-prep{
 	float:left;
-	width: 40%;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
 	font-size: 15pt;
-}
-
-.lesson-rating{
-	float:right;
-	width: 40%;
+	overflow: hidden;
+	line-height: normal;
 }
 
 .lesson-cat{
-	margin-left: 15%;
+	float:left;
 }
 
 .lesson-prep{
-	margin-top: 2%;
-	margin-left: 15%;
+	float:right;
+	margin-top: 3.5%;
+}
+
+.lesson-message{
+	background-color: #e64c2e;
+	width: 20%;
+	height: 50px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.lesson-message-text{
+	font-size: 20pt;
 }
 
 .lesson-cat img{
@@ -96,11 +108,12 @@
 }
 
 .lesson-book {
-	float: left;
 	background-color: #e64c2e;
 	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
 	height: 50px;
-	margin-top: 20px;
+	margin-top: 60px;
 }
 
 .lesson-facts {
@@ -108,7 +121,6 @@
 }
 
 .lesson-book-text {
-	margin-top: 9px;
 	font-size: 20pt;
 }
 

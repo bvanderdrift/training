@@ -22,7 +22,8 @@
 }
 
 .login-sm-div img{
-	width: 40%;
+	width: 10%;
+	margin-right: 10px;
 }
 
 .login-sm-span{
@@ -32,4 +33,9 @@
 .sm-href{
 	color: #f9f9ed;
 	text-decoration: none;
+}
+
+li{
+	margin-top: 30px ! important;
+	margin-left: 20px ! important;
 }
