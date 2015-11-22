@@ -103,13 +103,36 @@ Stations = [
 AnyStation = "Any";
 
 Categories = [
-	"Arts & Humanities",
-	"Computer Science",
-	"Life Science",
-	"Language",
-	"Math & Logic",
-	"Personal Development",
-	"Physical Science & Engineering",
-	"Social Skills",
-	"Other"
+	{
+		code: "ah",
+		description: "Arts & Humanities",
+	},
+	{
+		code: "cs",
+		description: "Computer Science",
+	},
+	{
+		code: "ls",
+		description: "Life Science",
+	},
+	{
+		code: "la",
+		description: "Language",
+	},
+	{
+		code: "ml",
+		description: "Math & Logic",
+	},
+	{
+		code: "pd",
+		description: "Personal Development",
+	},
+	{
+		code: "pe",
+		description: "Physical Science & Engineering",
+	},
+	{
+		code: "ss",
+		description: "Social Skills",
+	}
 ]

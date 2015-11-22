@@ -5,20 +5,31 @@
 	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}
-	  <h1 class="title">Welcome</h1>
+	  <h1 class="title">Tell us more about yourself</h1>
 	{{/contentFor}}
 
 	{{#ionView}}
 	  {{#ionContent}}
-	    
-	    Welcome new learner! Please give us your interests!
+	    <h1 class="train-text cats-hello"><b>Hello</b></h1>
+	    <div id="profile-picture-div">
+	    	<div style="background-image: url(https://graph.facebook.com/v2.2/{{currentUser.services.facebook.id}}/picture?type=large);" id="profile-picture-img"></div> 
+	    </div>
+		<br />
+	    <div id="prof-pic-name-caption">{{currentUser.services.facebook.name}}</div>
 
-		<form id="categoryForm">
+		
+		<div id="categorygrid">
 			{{#each categories}}
-				<input type="checkbox" value="{{name}}" class="categoryCB"> {{name}}<br />
+			<div class="category-selector">
+				<img src="/CategoryLogos/{{code}}.png"/> 
+				<div class="category-name-div">{{description}}</div>
+			</div>
 			{{/each}}
-			<input type="submit">
-		</form>
+		</div>
+
+		<div id="doneBTN">
+		<div id="done-text">Done!</div>
+		</div>
 
 	  {{/ionContent}}
 	{{/ionView}}

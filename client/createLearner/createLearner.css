@@ -1,0 +1,81 @@
+.cats-hello{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#profile-picture-div{
+	width:20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#profile-picture-img{
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 100%;
+	border-radius: 50%;
+	border: 10px solid #e64c2e;
+	width: 100%;
+}
+
+#prof-pic-name-caption{
+	font-size: 25pt;
+	text-align: center;
+}
+
+#categorygrid{
+	width: 75%;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#categorygrid:after{
+	content: "";
+	  display: table;
+	  clear: both;
+}
+
+.category-selector{
+	float:left;
+	width: 30%;
+	height: 20%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.category-selector.selected img{
+	opacity: 1;
+}
+
+.category-selector.unselected img{
+	opacity: 0.2;
+}
+
+.category-selector img{
+	width: 100%;
+}
+
+.category-name-div{
+	width: 100%;
+	text-align: center;
+	font-size: 15pt;
+}
+
+#doneBTN{
+	width: 50%;
+	height: 10%;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	background-color: #e64c2e;
+	text-align: center;
+}
+
+#done-text{
+	line-height: 100%;
+	font-size: 30pt;
+}

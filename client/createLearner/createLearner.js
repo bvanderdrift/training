@@ -1,55 +1,58 @@
 Template.createLearner.onRendered(function(){
-	setCheckedCheckboxesValues($(".categoryCB"), Meteor.user().profile.interests);
+	setSelectorValues($(".category-selector"), Meteor.user().profile.interests);
+
+	$("#profile-picture-img").height($("#profile-picture-img").width());
+	$(".category-selector").height(1.3* $(".category-selector").width());
+	$(".category-selector").click(function(){
+		var selector = $(this);
+		if(selector.hasClass('selected')){
+			selector.removeClass('selected');
+			selector.addClass('unselected');
+		}else{
+			selector.removeClass('unselected');
+			selector.addClass('selected');
+		}
+	});
+
+	$("#doneBTN").click(function(){
+		interestedCats = getCheckedCheckboxesValues($(".category-selector"));
+		Meteor.users.update(Meteor.userId(), {$set: {"profile.interests": interestedCats}});
+		Router.go('plan');
+	});
 });
 
 Template.createLearner.helpers({
 	categories: function(){
-		var cats = [];
-
-		for (var i = Categories.length - 1; i >= 0; i--) {
-			cats.push({name: Categories[i]});
-		}
-
-		return cats;
+		return Categories;
 	}
 });
 
-Template.createLearner.events({
-	"submit #categoryForm": function(e){
-		e.preventDefault();
-
-		interestedCats = getCheckedCheckboxesValues($(".categoryCB"));
-
-		Meteor.users.update(Meteor.userId(), {$set: {"profile.interests": interestedCats}});
-
-		Router.go('plan');
-	}
-});
-
-function getCheckedCheckboxesValues(checkboxes){
+function getCheckedCheckboxesValues(selectors){
 	var resultValues = [];
 
-	for (var i = checkboxes.length - 1; i >= 0; i--) {
-		var checkbox = checkboxes[i];
+	selectors.each(function(){
+		var selector = $(this);
 
-		if(checkbox.checked){
-			resultValues.push(checkbox.value);
+		if(selector.hasClass('selected')){
+			resultValues.push(getSelectorValue(selector));
 		}
-	}
+	});
 
 	return resultValues;
 }
 
-function setCheckedCheckboxesValues(checkboxes, values){
-	var resultValues = [];
+function setSelectorValues(selectors, values){
+	selectors.each(function(){
+		var selector = $(this);
 
-	for (var i = checkboxes.length - 1; i >= 0; i--) {
-		var checkbox = checkboxes[i];
-
-		if(values.indexOf(checkbox.value) >= 0){
-			checkbox.checked = true;
+		if(values.indexOf(getSelectorValue(selector)) >= 0){
+			selector.addClass("selected");
+		}else{
+			selector.addClass("unselected");
 		}
-	}
+	});
+}
 
-	return resultValues;
+function getSelectorValue(selector){
+	return selector.find(".category-name-div").text();
 }
