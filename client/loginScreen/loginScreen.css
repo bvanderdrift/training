@@ -1,0 +1,35 @@
+.login-logo{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 7%;
+	display: block;
+}
+
+.login-join-us{
+	width: 50%;
+	font-size: 50pt;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login-sm-div{
+	width: 33%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login-sm-div img{
+	width: 40%;
+}
+
+.login-sm-span{
+	font-size: 30pt;
+}
+
+.sm-href{
+	color: #f9f9ed;
+	text-decoration: none;
+}

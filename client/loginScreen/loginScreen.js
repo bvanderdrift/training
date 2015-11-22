@@ -1,9 +1,26 @@
+Template.loginScreen.onRendered(function(){
+	$("#login-buttons-facebook").hide();
+
+	$("#sm-fb").click(function(){
+		$("#login-buttons-facebook").click();
+	});
+});
+
 Template.loginScreen.helpers({
-	pluspoints: function(){
+	socialmedia: function(){
 		return [
-			{point: "Super"},
-			{point: "Duper"},
-			{point: "Awesome"}
+			{
+				name: "Facebook",
+				code: "fb"
+			},
+			{	
+				name: "Twitter",
+				code: "tw"
+			},
+			{
+				name: "LinkedIn",
+				code: "in"
+			}
 		];
 	}
 });
