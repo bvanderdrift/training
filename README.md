@@ -1,7 +1,9 @@
 # Training
 This project is made as part of the Hacktrain 2.0 Hackathon. 
 
-
+### More Information:
+* ["Training" Project Page on DevPost](http://devpost.com/software/training-948psu)
+* ["Training" Idea Presentation Video](https://www.youtube.com/watch?v=YS2LN7gUDKw)
 
 ## Vision
 The average commuter working in London spends about two times one hour a day on the train. The perfect length of time to absorb new information is 50 minutes.  Our application makes use of this through bringing teachers and learners together.
